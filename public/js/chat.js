@@ -70,7 +70,7 @@ $messageForm.addEventListener('submit', (e) => {
     // e.target = sth that we listen for, in this case the message form
     const message = e.target.elements.message.value; 
     
-    socket.emit('sendMessage', message, (error) => {s
+    socket.emit('sendMessage', message, (error) => {
         $messageFormButton.removeAttribute('disabled');
         $messageFormInput.value = '';
         $messageFormInput.focus();
